@@ -131,13 +131,13 @@ STATICFILES_DIRS = (
                     )
 
 
-BASE_DIR = dirname(dirname(abspath(__file__)))
+
 
 STATIC_ROOT = 'static' # Important for Heroku
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-                    path.join(BASE_DIR, 'static'),  # Important for Heroku
+                    os.path.join(BASE_DIR, 'static'),  # Important for Heroku
                     )
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
